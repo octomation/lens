@@ -1,4 +1,4 @@
-# NGINX-LE - Nginx web and proxy with automatic let's encrypt
+# NGINX-LE - Nginx web and proxy with automatic let's encrypt [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/umputun/nginx-le/) 
 
 Simple nginx image (alpine based) with integrated [Let's Encrypt](https://letsencrypt.org) support.
 
@@ -25,7 +25,7 @@ Simple nginx image (alpine based) with integrated [Let's Encrypt](https://letsen
 ## Some implementation details
 
 - image uses alpine's `certbot` package.
-- `script/entrypoint.sh` requests LE certificate and will refresh every 60 days.
+- `script/entrypoint.sh` requests LE certificate and will refresh every 10 days in case if certificate is close to expiration (30day)
 - `script/le.sh` gets SSL
 - nginx-le on [docker-hub](https://hub.docker.com/r/umputun/nginx-le/)
 - **A+** overall rating on [ssllabs](https://www.ssllabs.com/ssltest/index.html)

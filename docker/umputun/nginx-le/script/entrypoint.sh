@@ -14,8 +14,11 @@ SSL_CHAIN_CERT=/etc/nginx/ssl/${SSL_CHAIN_CERT}
 mkdir -p /etc/nginx/conf.d
 mkdir -p /etc/nginx/ssl
 
+#collect services
+SERVICES=$(find "/etc/nginx/" -type f -maxdepth 1 -name "service*.conf")
+
 #copy /etc/nginx/service*.conf if any of servcie*.conf mounted
-if [ -f /etc/nginx/service*.conf ]; then
+if [ ${#SERVICES} -ne 0 ]; then
     cp -fv /etc/nginx/service*.conf /etc/nginx/conf.d/
 fi
 
@@ -46,7 +49,7 @@ mv -v /etc/nginx/conf.d /etc/nginx/conf.d.disabled
     mv -v /etc/nginx/conf.d.disabled /etc/nginx/conf.d #enable
     echo "reload nginx with ssl"
     nginx -s reload
-    sleep 60d
+    sleep 10d
  done
 ) &
 

@@ -29,7 +29,7 @@
 #### umputun/nginx-le
 
 - [GitHub](https://github.com/umputun/nginx-le)
-  - [x] rev. [d29a9c7](https://github.com/umputun/nginx-le/tree/d29a9c7)
+  - [x] rev. [2f1a493](https://github.com/umputun/nginx-le/tree/2f1a493)
 - [Docker Hub](https://hub.docker.com/r/umputun/nginx-le/)
 
 ### Nginx
