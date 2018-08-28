@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+
+  nginx:
+    image: nginx:mainline-alpine
+
+  proxy:
+    image: kamilsk/nginx:alpine
+    build:
+      context:    context
+      dockerfile: ../mainline-alpine.Dockerfile
+    depends_on:
+    - nginx
+    environment:
+    - DEV_ENABLED=true
+    ports:
+    - 80:80
+    - 443:443
+    volumes:
+    - ./etc/conf.d:/etc/nginx/sites-available
+    - ./etc/ssl:/etc/nginx/ssl
+    - letsencrypt:/etc/letsencrypt
+
+volumes:
+
+  letsencrypt: { driver: local }

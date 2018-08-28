@@ -1,0 +1,21 @@
+## Short Description
+
+Nginx with Certbot to automatically enable HTTPS on your website. Powered by Let's Encrypt.
+
+## Full Description
+
+---
+
+This image based on [nginx](https://hub.docker.com/_/nginx/).(NGINX_BASE)
+and contains [Nginx](http://nginx.org/).(vNGINX_VERSION) and [Certbot](https://certbot.eff.org/).(vCERTBOT_VERSION).
+
+---
+
+### Docker files
+
+The primary purpose of the image is to simplify work with HTTPS for multiple sites in development and production.
+
+- [Alpine based](https://github.com/kamilsk/shared/blob/docker-common/nginx/mainline-alpine.Dockerfile)
+- [Debian based](https://github.com/kamilsk/shared/blob/docker-common/nginx/mainline-debian.Dockerfile)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-109817251-4/shared/docker-common:hub.docker.com/nginx?pixel)](https://github.com/kamilsk/shared/tree/docker-common#kamilsknginx)
