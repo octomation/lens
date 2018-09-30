@@ -1,10 +1,10 @@
-> # lens
+> # 🔒 lens <img align="right" width="126" src=".github/character.png">
 >
-> 🔒 Let's Encrypt Nginx Server.
+> Let's Encrypt Nginx Server.
 
-[![Patreon](https://img.shields.io/badge/patreon-donate-orange.svg)](https://www.patreon.com/octolab)
-[![Research](https://img.shields.io/badge/research-in%20progress-yellow.svg)](../../tree/research/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Patreon][icon_patreon]](https://www.patreon.com/octolab)
+[![Research][icon_research]](../../tree/research)
+[![License][icon_license]](LICENSE)
 
 ## Images
 
@@ -120,7 +120,8 @@ $ docker run --rm -d kamilsk/nginx [/entrypoint.sh] bash                        
 
 ---
 
-[![@kamilsk](https://img.shields.io/badge/author-%40kamilsk-blue.svg)](https://twitter.com/ikamilsk)
-[![@octolab](https://img.shields.io/badge/sponsor-%40octolab-blue.svg)](https://twitter.com/octolab_inc)
-
 made with ❤️ by [OctoLab](https://www.octolab.org/)
+
+[icon_license]:  https://img.shields.io/badge/license-MIT-blue.svg
+[icon_patreon]:  https://img.shields.io/badge/patreon-donate-orange.svg
+[icon_research]: https://img.shields.io/badge/research-in%20progress-yellow.svg
