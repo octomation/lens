@@ -182,7 +182,7 @@ enable_prod() {
             site=${fqdn}
         elif [[ -f ${fqdn}.conf ]]; then
             site=${fqdn}.conf
-        elif find . -type f -print | xargs grep ${fqdn}; then
+        elif find . -type f -print | xargs grep ${fqdn} > /dev/null 2>&1; then
             site=$(find . -type f -print0 | xargs -0 grep -l ${fqdn} | xargs basename)
         else
             echo "  [CRITICAL] cannot find ${fqdn} in ${SITES_PATH}"
