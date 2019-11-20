@@ -2,10 +2,6 @@
 >
 > Let's Encrypt Nginx Server.
 
-[![Patreon][icon_patreon]](https://www.patreon.com/octolab)
-[![Research][icon_research]](../../tree/research)
-[![License][icon_license]](LICENSE)
-
 ## Images
 
 - [kamilsk/nginx](https://hub.docker.com/r/kamilsk/nginx/)
@@ -36,8 +32,8 @@ $ docker run --rm -d \
 
 ## Development
 
-You can add [self-signed](nginx/etc/ssl/xip.io.crt) certificate to your keychain to avoid getting annoying browser privacy
-errors on local development.
+You can add [self-signed](nginx/etc/ssl/xip.io.crt) certificate to your keychain
+to avoid getting annoying browser privacy errors on local development.
 
 ```bash
 $ make nginx-up nginx-status
@@ -111,17 +107,6 @@ $ docker run --rm -d kamilsk/nginx [/entrypoint.sh] with domain1:alias1,alias2 d
 $ docker run --rm -d kamilsk/nginx [/entrypoint.sh] bash                                # exec "$@" otherwise
 ```
 
-## Where it is used
-
-- [octolab/hugs](https://github.com/octolab/hugs/)
-- [kamilsk/click](https://github.com/kamilsk/click/)
-- [kamilsk/forma](https://github.com/kamilsk/form-api/)
-- [kamilsk/passport](https://github.com/kamilsk/passport/)
-
 ---
 
-made with ❤️ by [OctoLab](https://www.octolab.org/)
-
-[icon_license]:  https://img.shields.io/badge/license-MIT-blue.svg
-[icon_patreon]:  https://img.shields.io/badge/patreon-donate-orange.svg
-[icon_research]: https://img.shields.io/badge/research-in%20progress-yellow.svg
+made with ❤️ for everyone
