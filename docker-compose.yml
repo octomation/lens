@@ -9,7 +9,7 @@ services:
     image: kamilsk/nginx:alpine
     build:
       context:    context
-      dockerfile: ../mainline-alpine.Dockerfile
+      dockerfile: ../mainline/alpine/Dockerfile
     depends_on:
     - nginx
     environment:
