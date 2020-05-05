@@ -5,8 +5,8 @@ echo "script:" $0 "call stack:" $@
 REPEAT_LOG=/tmp/repeat.log
 SSL_PATH=/etc/nginx/ssl
 DHPARAMS=dhparams.pem
-DEV_CERT=xip.io.crt
-DEV_KEY=xip.io.key
+DEV_CERT=local.crt
+DEV_KEY=local.key
 WEBROOT=/usr/share/nginx/html
 CONFIG_PATH=/etc/nginx/conf.d
 SITES_PATH=/etc/nginx/sites-available
@@ -236,6 +236,7 @@ process() {
             fi
         done
     fi
+    chmod -x ${CONFIG_PATH}/*.conf
     nginx -s reload
     local result=$?
     if [[ ${result} -gt 0 ]]; then
@@ -261,6 +262,9 @@ watch() {
 }
 
 case $1 in
+    fixup)
+        echo "[TODO] sed -i 's|||g' file.conf..."
+    ;;
     renew)
         echo "[TODO] force renew..."
     ;;
@@ -272,6 +276,7 @@ case $1 in
         wrapped_process $(cat ${REPEAT_LOG})
     ;;
     process)
+        echo "[TODO] do not copy all configs..."
         wrapped_process ${@:2}
     ;;
     *)
