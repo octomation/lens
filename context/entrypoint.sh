@@ -83,7 +83,7 @@ generate() {
     if [[ ! -f ${SSL_PATH}/${DEV_CERT} || ! -f ${SSL_PATH}/${DEV_KEY} ]]; then
         (
             cd ${SSL_PATH}
-            openssl req -out ${DEV_CERT} -new -newkey rsa -keyout ${DEV_KEY} -config local.conf -x509 -days 365
+            openssl req -out ${DEV_CERT} -new -newkey rsa -keyout ${DEV_KEY} -config local.conf -x509 -days 3650
             if [[ $? -gt 0 ]]; then
                 echo "  [CRITICAL] cannot generate self-signed certificate"
                 echo "done"

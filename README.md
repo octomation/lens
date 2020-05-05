@@ -15,24 +15,9 @@ $ docker run --rm -d \
                                   www.octolab.org:octolab.org
 ```
 
-### Available images
-
-- `kamilsk/nginx:alpine`
-  - `kamilsk/nginx:1.x-alpine`
-  - `kamilsk/nginx:1.x`
-  - `kamilsk/nginx:latest`
-- `kamilsk/nginx:debian`
-  - `kamilsk/nginx:1.x-debian`
-- `quay.io/kamilsk/nginx:alpine`
-  - `quay.io/kamilsk/nginx:1.x-alpine`
-  - `quay.io/kamilsk/nginx:1.x`
-  - `quay.io/kamilsk/nginx:latest`
-- `quay.io/kamilsk/nginx:debian`
-  - `quay.io/kamilsk/nginx:1.x-debian`
-
 ## Development
 
-You can add [self-signed](nginx/etc/ssl/xip.io.crt) certificate to your keychain
+You can add [self-signed](nginx/etc/ssl/local.crt) certificate to your keychain
 to avoid getting annoying browser privacy errors on local development.
 
 ```bash
